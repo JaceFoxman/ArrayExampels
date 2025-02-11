@@ -44,6 +44,9 @@ Module ArrayExampel
     Sub MultiDimensionalArrays()
 
         Dim students(14, 2) As Single 'rows and collums, still 0 to x. total length should be 15 X 3
+        Dim classes() As String = {"Math", "History", "Art"}
+        Dim somethingElse(,) As Integer = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}} 'need a comma after something else to show that its 2 dimensions
+        Dim threeDimensionArray(,,) As Integer = {{{1, 2, 3}}, {{4, 5, 6}}, {{7, 8, 9}}} 'need 2 comma inside paranthises to show 3 dimesnsions
 
         students(3, 0) = 75.43
         students(3, 1) = 85.66
