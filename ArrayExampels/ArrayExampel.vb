@@ -35,6 +35,8 @@ Module ArrayExampel
         Next
 
         MultiDimensionalArrays()
+        TestRandomness()
+
 
     End Sub
     Sub SimpleArrays()
@@ -55,5 +57,25 @@ Module ArrayExampel
         Console.WriteLine(students)
 
     End Sub
+    Sub TestRandomness()
+        Dim numberCounter(20) As Integer
+
+        For i = 1 To 100
+            numberCounter(RandomNumberBetween(3, 10)) += 1
+        Next
+
+        For i = LBound(numberCounter) To UBound(numberCounter)
+            Console.WriteLine($"{CStr(i).PadLeft(4)} hit {CStr(numberCounter(i)).PadLeft(4)}")
+        Next
+
+    End Sub
+    Function RandomNumberBetween(min As Integer, max As Integer) As Integer
+        Dim temp As Single
+        Randomize()
+        temp = Rnd()
+        temp *= max - min
+        temp += min
+        Return CInt(temp)
+    End Function
 
 End Module
