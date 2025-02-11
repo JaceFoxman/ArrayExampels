@@ -45,9 +45,11 @@ Module ArrayExampel
 
         Dim students(14, 2) As Single 'rows and collums, still 0 to x. total length should be 15 X 3
 
+        students(3, 0) = 75.43
+        students(3, 1) = 85.66
+        students(3, 2) = 94.7
 
-
-        Console.WriteLine()
+        Console.WriteLine(students)
 
     End Sub
 
